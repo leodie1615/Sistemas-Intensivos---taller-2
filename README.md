@@ -1,4 +1,4 @@
-# Sistemas Intensivos en Datos Taller 2: Enriquecimiento de datos con fuentes abiertas
+# Sistemas Intensivos en Datos - Taller 2: Enriquecimiento de datos con fuentes abiertas
 # Integrantes:
 
 - 2222222222 Lina Ojeada
@@ -14,7 +14,7 @@
 | Silver | job-silver-embarcaciones |
 | Gold   | job-gold-embarcaciones   |
 
-- Orquestación: Los anteriores flujos estan orquestados bajo el siguiente flujo YAML:
+- Orquestación: Los anteriores flujos estan orquestados y la ETL la encuentran en este enlace: [ETL](https://dbc-2d8353f4-c1b7.cloud.databricks.com/jobs/1115246332897841/tasks?o=2778813972398238). Asimismo la orquestación se encuentra definida bajo los siguientes pasos del flujo YAML:
 
 resources:
   
@@ -61,7 +61,9 @@ resources:
 
 - Dashboard:
   
-  
+
+- Finalmente, se adjunto presentacion juntos con los correspondientes notebooks de la arquitectura medallón.
+- 
 # Objetivo del taller:
 
 - Resolver un requerimiento de negocio basado en dos datasets relacionados disponibles de forma abierta
@@ -70,7 +72,7 @@ resources:
 
 # Instrucciones Ejecución:
 
-- El Pipeline orquestado, se ejecuta cada vez que existe un nuevo archivo en una ruta de staging dentro Databricks. Una vez se desencadena la ejecución, ingesta, transforma y enriquece las fuentes de datos NOAA y AIS con el fin de crear una tabla transformada que pueda ser soporte para un Dashboard.
+- El Pipeline orquestado, se ejecuta cada vez que existe un nuevo archivo en una ruta de staging dentro Databricks. Una vez se desencadena la ejecución, ingesta, transforma y enriquece las fuentes de datos NOAA y AIS con el fin de crear una tabla transformada que pueda ser soporte para un Dashboard donde se visualiza Grid y metricas de profundidad junto con caracteristicas de las embarcaciones que realizaron el registro.
 
 # Conclusiones:
 
