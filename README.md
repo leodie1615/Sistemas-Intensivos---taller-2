@@ -1,4 +1,4 @@
-# Sistemas-Intensivos---taller-2
+# Sistemas Intensivos en Datos Taller 2: Enriquecimiento de datos con fuentes abiertas
 # Integrantes:
 
 - 2222222222 Lina Ojeada
@@ -17,7 +17,10 @@
 - Orquestación: Los anteriores flujos estan orquestados bajo el siguiente flujo YAML:
 
 resources:
-  jobs:
+  
+        
+
+    jobs:
     ETL_embarcaciones:
       name: ETL-embarcaciones
       trigger:
@@ -30,7 +33,6 @@ resources:
             notebook_path: /Workspace/Users/odl_user_1905298@databrickslabs.com/job-bronze-embarcaciones
             source: WORKSPACE
           existing_cluster_id: 1006-120337-9shwlkkm
-
         - task_key: silver-embarcaciones
           depends_on:
             - task_key: embarcaciones-bronze
@@ -57,12 +59,14 @@ resources:
       queue:
         enabled: true
 
+- Dashboard:
+  
   
 # Objetivo del taller:
 
-• Resolver un requerimiento de negocio basado en dos datasets relacionados disponibles de forma abierta
-• Utilizar la plataforma de Databricks para procesar los datos y presentar los resultados.
-• Crear un proceso escalable que permita utilizar la infraestructura de manera eficiente
+- Resolver un requerimiento de negocio basado en dos datasets relacionados disponibles de forma abierta
+- Utilizar la plataforma de Databricks para procesar los datos y presentar los resultados.
+- Crear un proceso escalable que permita utilizar la infraestructura de manera eficiente
 
 # Instrucciones Ejecución:
 
