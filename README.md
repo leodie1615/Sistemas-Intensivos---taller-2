@@ -6,14 +6,15 @@
 - 202525657 Diego Baron
 
 # Instalaciones
-Acontinuación se detalla el paso a paso de ejecucion del taller:
+- Arquitectura medallón: Acontinuación se detalla el paso a paso de ejecucion del taller:
 
-Etapa Nombre del notebook
-Bronze job-bronze-embarcaciones
-Silver job-silver-embarcaciones
-Gold job-gold-embarcaciones
+| Etapa | Nombre del notebook            |
+|-------|--------------------------------|
+| Bronze | job-bronze-embarcaciones |
+| Silver | job-silver-embarcaciones |
+| Gold   | job-gold-embarcaciones   |
 
-Los anteriores flujos estan orquestados bajo el siguiente flujo YAML:
+- Orquestación: Los anteriores flujos estan orquestados bajo el siguiente flujo YAML:
 
 resources:
   jobs:
@@ -29,6 +30,7 @@ resources:
             notebook_path: /Workspace/Users/odl_user_1905298@databrickslabs.com/job-bronze-embarcaciones
             source: WORKSPACE
           existing_cluster_id: 1006-120337-9shwlkkm
+
         - task_key: silver-embarcaciones
           depends_on:
             - task_key: embarcaciones-bronze
@@ -36,6 +38,7 @@ resources:
             notebook_path: /Workspace/Users/odl_user_1905298@databrickslabs.com/job-silver-embarcaciones
             source: WORKSPACE
           existing_cluster_id: 1006-120337-9shwlkkm
+
         - task_key: gold-embarcaciones
           depends_on:
             - task_key: silver-embarcaciones
@@ -43,14 +46,17 @@ resources:
             notebook_path: /Workspace/Users/odl_user_1905298@databrickslabs.com/job-gold-embarcaciones
             source: WORKSPACE
           existing_cluster_id: 1006-120337-9shwlkkm
+
         - task_key: Embarcaciones
           depends_on:
             - task_key: gold-embarcaciones
           dashboard_task:
             subscription: {}
             dashboard_id: 01f0cd737b7f1b45b75fc380c5bf51c1
+
       queue:
         enabled: true
+
   
 # Objetivo del taller:
 
