@@ -6,7 +6,7 @@
 - 202525657 Diego Baron
 
 # Instalaciones
-- Arquitectura medallón: Acontinuación se detalla el paso a paso de ejecucion del taller:
+- Arquitectura medallón: A continuación se detalla el paso a paso de ejecucion del taller:
 
 | Etapa | Nombre del notebook            |
 |-------|--------------------------------|
@@ -14,11 +14,11 @@
 | Silver | job-silver-embarcaciones |
 | Gold   | job-gold-embarcaciones   |
 
-- Orquestación: Los anteriores flujos estan orquestados y la ETL la encuentran en este enlace: [ETL](https://dbc-2d8353f4-c1b7.cloud.databricks.com/jobs/1115246332897841/tasks?o=2778813972398238). Asimismo la orquestación se encuentra definida bajo los siguientes pasos del flujo YAML:
+- Orquestación: Los flujos anteriores están orquestados, y la ETL puede consultarse en el siguiente enlace: [ETL](https://dbc-2d8353f4-c1b7.cloud.databricks.com/jobs/1115246332897841/tasks?o=2778813972398238). Asimismo, la orquestación está definida según los siguientes pasos en el flujo YAML:
+
 
 resources:
-  
-        
+    
 
     jobs:
     ETL_embarcaciones:
@@ -59,11 +59,11 @@ resources:
       queue:
         enabled: true
 
-- Dashboard:
+- Dashboard: ##############################
   
 
-- Finalmente, se adjunto presentacion juntos con los correspondientes notebooks de la arquitectura medallón.
-- 
+- Finalmente, se adjunta presentacion junto con los correspondientes notebooks de la arquitectura medallón.
+  
 # Objetivo del taller:
 
 - Resolver un requerimiento de negocio basado en dos datasets relacionados disponibles de forma abierta
@@ -72,10 +72,7 @@ resources:
 
 # Instrucciones Ejecución:
 
-- El Pipeline orquestado, se ejecuta cada vez que existe un nuevo archivo en una ruta de staging dentro Databricks. Una vez se desencadena la ejecución, ingesta, transforma y enriquece las fuentes de datos NOAA y AIS con el fin de crear una tabla transformada que pueda ser soporte para un Dashboard donde se visualiza Grid y metricas de profundidad junto con caracteristicas de las embarcaciones que realizaron el registro.
+- El pipeline orquestado se ejecuta automáticamente cada vez que se detecta un nuevo archivo en la ruta de staging dentro de Databricks. Una vez se activa la ejecución, el proceso ingesta, transforma y enriquece las fuentes de datos NOAA y AIS, con el fin de generar una tabla transformada que sirve como insumo para un dashboard donde se visualizan el grid, las métricas de profundidad y las características de las embarcaciones que realizaron los registros.
 
-# Conclusiones:
 
-- Las recomendaciones finales y los insights se encuentran en el notebook taller2_final.
-  Nota: El informe ejecutivo se encuentra en el repositorio bajo el nombre: Resumen Ejecutivo Taller 2.pdf
 
